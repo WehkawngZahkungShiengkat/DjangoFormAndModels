@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static "L2prac_app/css/main.css"%}">
+  </head>
+  <body class="bg">
+    <div class="">
+      <h1>Hello, welcome.</h1>
+      <br><br>
+      <p>Hello, now welcome to homepage</p>
+      <p>{{home}}</p>
+      <br>
+      <h2>Use below options to above url link by adding at the end of it.</h2>
+      <ol>
+        <li>Go to /form to register user information to test this web-application. <b>DO NOT PUT REAL INFO</b></li>
+        <li>Go to /users to see all the users info.</li>
+        <p>Some of the users info are auto-generated user inforamtions made by using faker.</p>
+      </ol>
+
+
+    </div>
+  </body>
+</html>
