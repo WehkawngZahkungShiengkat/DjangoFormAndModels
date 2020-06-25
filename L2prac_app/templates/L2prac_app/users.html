@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>The Users</title>
-    <link rel="stylesheet" href="{% static "L2prac_app/css/main.css"%}">
-  </head>
-  <body>
-    <div class="">
+{% extends "L2prac_app/home.html" %}
+  {%block body_block%}
+    <div class="container">
       <h1>Here are your users info for L2prac_app</h1>
       {% if usersinfo %}
       <ol>
         {% for u in usersinfo %}
         <li>User Info id:{{u.uid}}</li>
           <ul>
-            <li>First Name: {{u.fname}}</li>
-            <li>Last Name: {{u.lname}}</li>
+            <li>First Name: {{u.fname|upper}}</li>
+            <li>Last Name: {{u.lname|upper}}</li>
             <li>Email: {{u.umail}}</li>
           </ul>
           {% endfor %}
@@ -24,5 +18,4 @@
       <h1>No user data found!</h1>
       {% endif %}
     </div>
-  </body>
-</html>
+  {%endblock%}
